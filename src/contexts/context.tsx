@@ -12,6 +12,7 @@ import {
    PuppiesContextValue,
    PuppiesProviderProps,
    Filters,
+   Parent,
 } from "@/types";
 import mockData from "@/utils/mock/db.json";
 
@@ -21,6 +22,7 @@ export const PuppiesContext = createContext<PuppiesContextValue>(
 
 export function PuppiesProvider({ children }: PuppiesProviderProps) {
    const [puppies, setPuppies] = useState<Puppy[]>([]);
+   const [parents, setParents] = useState<Parent[]>([]);
    const [isLoading, setIsLoading] = useState<boolean>(true);
    const [error, setError] = useState<string | null>(null);
    const [showPuppiesList, setShowPuppiesList] = useState<boolean>(false);
@@ -37,6 +39,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
       setIsLoading(true);
       try {
          setPuppies(mockData.puppies as Puppy[]);
+         setParents(mockData.parents as Parent[]);
          setError(null);
          // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
@@ -98,6 +101,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
    const contextValue = useMemo<PuppiesContextValue>(
       () => ({
          puppies,
+         parents,
          filteredPuppies,
          isLoading,
          error,
@@ -112,6 +116,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
       }),
       [
          puppies,
+         parents,
          filteredPuppies,
          isLoading,
          error,

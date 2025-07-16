@@ -18,6 +18,7 @@ export interface Puppy {
 
 export interface PuppiesContextValue {
    puppies: Puppy[];
+   parents: Parent[];
    filteredPuppies: Puppy[];
    isLoading: boolean;
    error: string | null;
@@ -38,4 +39,12 @@ export interface PuppiesProviderProps {
 export interface Filters {
    selectedSex: string;
    selectedColor: string;
+}
+
+export interface Parent {
+   id: string;
+   name: string;
+   role: "Pai" | "Mãe";
+   color: string;
+   images: { src: string; alt: string }[];
 }

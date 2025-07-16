@@ -1,4 +1,46 @@
 {
+  "parents": [
+    {
+      "id": "p1",
+      "name": "Lupin",
+      "role": "Pai",
+      "color": "Preto e Branco",
+      "images": [
+        {
+          "src": "/assets/parents/pai-preto-branco.png",
+          "alt": "Lupin 1"
+        },
+        {
+          "src": "/assets/parents/pai-preto-branco.png",
+          "alt": "Lupin 2"
+        },
+        {
+          "src": "/assets/parents/pai-preto-branco.png",
+          "alt": "Lupin 3"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "Luna",
+      "role": "Mãe",
+      "color": "Red Merle",
+      "images": [
+        {
+          "src": "/assets/parents/mae-red-merle.png",
+          "alt": "Luna 1"
+        },
+        {
+          "src": "/assets/parents/mae-red-merle.png",
+          "alt": "Luna 2"
+        },
+        {
+          "src": "/assets/parents/mae-red-merle.png",
+          "alt": "Luna 3"
+        }
+      ]
+    }
+  ],
   "puppies": [
     {
       "id": "1",
@@ -11,6 +53,10 @@
         "img_lg": "/assets/puppies/gallery/male/male-1-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": false
     },
     {
@@ -24,6 +70,10 @@
         "img_lg": "/assets/puppies/gallery/female/female-1-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": false
     },
     {
@@ -37,6 +87,10 @@
         "img_lg": "/assets/puppies/gallery/female/female-2-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": false
     },
     {
@@ -50,6 +104,10 @@
         "img_lg": "/assets/puppies/gallery/male/male-2-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": false
     },
     {
@@ -63,6 +121,10 @@
         "img_lg": "/assets/puppies/gallery/female/female-1-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": true
     },
     {
@@ -76,6 +138,10 @@
         "img_lg": "/assets/puppies/gallery/male/male-2-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": true
     },
     {
@@ -89,6 +155,10 @@
         "img_lg": "/assets/puppies/gallery/female/female-1-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": true
     },
     {
@@ -102,6 +172,10 @@
         "img_lg": "/assets/puppies/gallery/male/male-2-lg.jpg",
         "gallery": []
       },
+      "parentIds": [
+        "p1",
+        "p2"
+      ],
       "availability": true
     }
   ]
