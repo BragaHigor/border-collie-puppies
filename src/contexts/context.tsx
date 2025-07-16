@@ -87,6 +87,14 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
       setSelectedSex("");
    }, []);
 
+   const filterBySex = useCallback(
+      (sex: string) => {
+         if (sex === "all") return puppies;
+         return puppies.filter((p) => p.sex === sex);
+      },
+      [puppies]
+   );
+
    const contextValue = useMemo<PuppiesContextValue>(
       () => ({
          puppies,
@@ -100,6 +108,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
          setSelectedSex,
          selectedColor,
          setSelectedColor,
+         filterBySex,
       }),
       [
          puppies,
@@ -113,6 +122,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
          setSelectedSex,
          selectedColor,
          setSelectedColor,
+         filterBySex,
       ]
    );
 

@@ -45,7 +45,7 @@ export function Hero(): JSX.Element {
                      Selecione pelo menos um campo.
                   </p>
                   <button
-                     className="text-quaternary text-sm xl:absolute right-0"
+                     className="text-secondary text-sm xl:absolute right-0"
                      onClick={onClear}
                   >
                      limpar as buscas

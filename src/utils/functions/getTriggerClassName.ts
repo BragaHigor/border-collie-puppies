@@ -11,13 +11,7 @@ export function getTriggerClassName(active: boolean): string {
    ];
 
    const conditional = active
-      ? [
-           "bg-primary",
-           "text-accent",
-           "border-b-2",
-           "border-accent",
-           "capitalize",
-        ]
+      ? ["bg-white", "text-accent", "border-b-2", "border-accent", "capitalize"]
       : ["text-primary"];
 
    return [...base, ...conditional].join(" ");

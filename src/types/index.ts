@@ -28,6 +28,7 @@ export interface PuppiesContextValue {
    setSelectedSex: Dispatch<SetStateAction<string>>;
    selectedColor: string;
    setSelectedColor: Dispatch<SetStateAction<string>>;
+   filterBySex: (sex: string) => Puppy[];
 }
 
 export interface PuppiesProviderProps {
