@@ -39,6 +39,9 @@ module.exports = {
             xs: "2px",
             "1.25rem": "1.25rem",
          },
+         backgroundImage: {
+            pattern: "url('/assets/background/footer/pattern-bg.png')",
+         },
       },
    },
    // eslint-disable-next-line @typescript-eslint/no-require-imports

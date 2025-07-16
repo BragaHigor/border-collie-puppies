@@ -3,6 +3,7 @@ import { Header } from "@/components/sections/Header/Header";
 import { PuppiesProvider } from "@/contexts/context";
 import type { Metadata } from "next";
 import { Caveat, Poppins } from "next/font/google";
+import { Footer } from "@/components/sections/Footer/Footer";
 
 export const metadata: Metadata = {
    title: "Página Inicial | Encinas & Braga Border Collie",
@@ -35,6 +36,7 @@ export default function RootLayout({
             >
                <Header />
                {children}
+               <Footer />
             </body>
          </html>
       </PuppiesProvider>

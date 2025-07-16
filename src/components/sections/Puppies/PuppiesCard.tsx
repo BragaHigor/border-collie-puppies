@@ -22,7 +22,7 @@ export function PuppiesCard({ puppies }: PuppiesCardProps): JSX.Element {
          : "Data";
    }, [dbDate]);
 
-   const whatsappLink = generateWhatsappLink({
+   const interestWhatsappLink = generateWhatsappLink({
       sex: puppies.sex,
       color: puppies.color,
    });
@@ -77,7 +77,7 @@ export function PuppiesCard({ puppies }: PuppiesCardProps): JSX.Element {
                   <div className="inset-x-0 mt-4 justify-center">
                      {isAvailable ? (
                         <a
-                           href={whatsappLink}
+                           href={interestWhatsappLink}
                            target="_blank"
                            rel="noopener noreferrer"
                            onClick={(e) => {
