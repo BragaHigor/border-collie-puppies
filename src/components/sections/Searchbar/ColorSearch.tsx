@@ -10,7 +10,6 @@ import {
    SelectValue,
 } from "@/components/ui/select";
 import { useCallback, useContext, useMemo } from "react";
-import { getTriggerClassName } from "@/utils/functions/getTriggerClassName";
 import { PuppiesContext } from "@/contexts/context";
 
 export function ColorSearch() {
@@ -29,8 +28,6 @@ export function ColorSearch() {
       [setSelectedColor]
    );
 
-   const triggerClassName = getTriggerClassName(!!selectedColor);
-
    return (
       <div className="flex items-center gap-2.5 w-full xl:w-[11.875rem] select-none">
          <span className="text-lg text-primary" aria-hidden="true">
@@ -41,7 +38,7 @@ export function ColorSearch() {
             onValueChange={handleChange}
             aria-label="Filtrar por cores"
          >
-            <SelectTrigger className={triggerClassName}>
+            <SelectTrigger className="bg-white text-accent border-b-2 border-accent capitalize">
                <SelectValue placeholder="Cores" />
             </SelectTrigger>
             <SelectContent>
