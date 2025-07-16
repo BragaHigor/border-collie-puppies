@@ -1,0 +1,24 @@
+{
+    "faqItems": [
+        {
+            "title": "How long does a construction project usually take?",
+            "description": "Timelines vary based on project size and complexity."
+        },
+        {
+            "title": "What are the payment terms?",
+            "description": "Payment terms are typically outlined in the contract."
+        },
+        {
+            "title": "Do you offer warranties on your work?",
+            "description": "Yes, we provide warranties for our construction services."
+        },
+        {
+            "title": "Can I see examples of your previous work?",
+            "description": "Absolutely, we have a portfolio available for review."
+        },
+        {
+            "title": "What safety measures do you implement on-site?",
+            "description": "We follow strict safety protocols to ensure a safe working environment."
+        }
+    ]
+}

@@ -1,53 +1,37 @@
 "use client";
 
-import {
-   createContext,
-   useEffect,
-   useState,
-   useMemo,
-   useCallback,
-} from "react";
+import { createContext, useState, useMemo, useCallback } from "react";
 import {
    Puppy,
    PuppiesContextValue,
    PuppiesProviderProps,
    Filters,
    Parent,
+   FaqItem,
 } from "@/types";
-import mockData from "@/utils/mock/db.json";
+import mockPuppies from "@/utils/mock/puppies-mock.json";
+import mockParents from "@/utils/mock/parents-mock.json";
+import mockFaq from "@/utils/mock/faq-mock.json";
 
 export const PuppiesContext = createContext<PuppiesContextValue>(
    {} as PuppiesContextValue
 );
 
 export function PuppiesProvider({ children }: PuppiesProviderProps) {
-   const [puppies, setPuppies] = useState<Puppy[]>([]);
-   const [parents, setParents] = useState<Parent[]>([]);
-   const [isLoading, setIsLoading] = useState<boolean>(true);
-   const [error, setError] = useState<string | null>(null);
-   const [showPuppiesList, setShowPuppiesList] = useState<boolean>(false);
+   const [puppies] = useState<Puppy[]>(() => mockPuppies.puppies as Puppy[]);
+   const [parents] = useState<Parent[]>(() => mockParents.parents as Parent[]);
+   const [faqItems] = useState<FaqItem[]>(() => mockFaq.faqItems as FaqItem[]);
 
-   const [selectedSex, setSelectedSex] = useState<string>("");
-   const [selectedColor, setSelectedColor] = useState<string>("");
+   const isLoading = false;
+   const error: string | null = null;
 
+   const [showPuppiesList, setShowPuppiesList] = useState(false);
+   const [selectedSex, setSelectedSex] = useState("");
+   const [selectedColor, setSelectedColor] = useState("");
    const [appliedFilters, setAppliedFilters] = useState<Filters>({
       selectedSex: "",
       selectedColor: "",
    });
-
-   useEffect(() => {
-      setIsLoading(true);
-      try {
-         setPuppies(mockData.puppies as Puppy[]);
-         setParents(mockData.parents as Parent[]);
-         setError(null);
-         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (err) {
-         setError("Erro ao carregar dados do mock");
-      } finally {
-         setIsLoading(false);
-      }
-   }, []);
 
    const filteredPuppies = useMemo(() => {
       const sexFilter = (appliedFilters.selectedSex ?? "").toLowerCase().trim();
@@ -71,13 +55,11 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
    }, [appliedFilters.selectedColor, appliedFilters.selectedSex, puppies]);
 
    const handleSubmit = useCallback(() => {
-      setIsLoading(true);
       setShowPuppiesList(true);
       setAppliedFilters({
          selectedSex,
          selectedColor,
       });
-      setIsLoading(false);
    }, [selectedSex, selectedColor]);
 
    const handleClearSearch = useCallback(() => {
@@ -102,6 +84,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
       () => ({
          puppies,
          parents,
+         faqItems,
          filteredPuppies,
          isLoading,
          error,
@@ -117,6 +100,7 @@ export function PuppiesProvider({ children }: PuppiesProviderProps) {
       [
          puppies,
          parents,
+         faqItems,
          filteredPuppies,
          isLoading,
          error,

@@ -30,6 +30,7 @@ export interface PuppiesContextValue {
    selectedColor: string;
    setSelectedColor: Dispatch<SetStateAction<string>>;
    filterBySex: (sex: string) => Puppy[];
+   faqItems: FaqItem[];
 }
 
 export interface PuppiesProviderProps {
@@ -47,4 +48,9 @@ export interface Parent {
    role: "Pai" | "Mãe";
    color: string;
    images: { src: string; alt: string }[];
+}
+
+export interface FaqItem {
+   title: string;
+   description: string;
 }
