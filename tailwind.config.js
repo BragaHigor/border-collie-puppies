@@ -21,7 +21,20 @@ module.exports = {
          secondary: "var(--font-caveat)",
       },
       extend: {
-         colors: {},
+         colors: {
+            primary: "#F7FAFC",
+            accent: {
+               DEFAULT: "#000000",
+               hover: "#222222",
+            },
+            secondary: {
+               DEFAULT: "#C79F6A",
+               hover: "#A67C52",
+            },
+            text: "#1A202C",
+            lightText: "#4A5568",
+            white: "#FFFFFF",
+         },
          backdropBlur: {
             xs: "2px",
             "1.25rem": "1.25rem",

@@ -16,7 +16,7 @@ h6 {
 }
 
 .h1 {
-   @apply text-4xl xl:text-[4.375rem] font-bold xl:leading-[4.875rem] uppercase text-[#C79F6A];
+   @apply text-4xl xl:text-[4.375rem] font-bold xl:leading-[4.875rem] uppercase text-secondary;
 }
 
 .h2 {
@@ -32,7 +32,7 @@ h6 {
 }
 
 .pretitle {
-   @apply font-secondary text-4xl xl:text-[2.875rem] leading-[110%] text-[#222222];
+   @apply font-secondary text-4xl xl:text-[2.875rem] leading-[110%] text-accent-hover;
 }
 
 .btn {
@@ -48,7 +48,7 @@ h6 {
 }
 
 .btn-tertiary {
-   @apply bg-tertiary hover:bg-tertiary-hover;
+   @apply bg-accent hover:bg-accent-hover;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
