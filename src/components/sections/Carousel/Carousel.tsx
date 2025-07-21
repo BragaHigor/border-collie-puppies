@@ -8,14 +8,14 @@ import { Pagination } from "swiper/modules";
 import Link from "next/link";
 import { Puppy } from "@/types";
 import { SkeletonGrid } from "../SkeletonGrid/SkeletonGrid";
-import { PuppiesCard } from "../Puppies/PuppiesCard";
+import { PuppiesCard } from "../InfoPuppies/PuppiesCard";
 
 interface PuppiesCarouselProps {
    puppies: Puppy[];
    fallbackCount?: number;
 }
 
-export function PuppiesCarousel({
+export function Carousel({
    puppies,
    fallbackCount = 4,
 }: PuppiesCarouselProps): JSX.Element {
@@ -40,7 +40,7 @@ export function PuppiesCarousel({
             return (
                <SwiperSlide key={puppy.id} className="select-none">
                   <div className="relative">
-                     <Link href={`/puppies/${puppy.id}#puppy-info`}>
+                     <Link href={`/filhotes/${puppy.id}`}>
                         <PuppiesCard puppies={puppy} />
                      </Link>
                   </div>

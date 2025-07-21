@@ -9,7 +9,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/male/male-1-sm.jpg",
         "img_lg": "/assets/puppies/gallery/male/male-1-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/male/male-1-lg.jpg",
+          "/assets/puppies/gallery/male/male-1-lg.jpg",
+          "/assets/puppies/gallery/male/male-1-lg.jpg",
+          "/assets/puppies/gallery/male/male-1-lg.jpg",
+          "/assets/puppies/gallery/male/male-1-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -26,7 +32,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/female/female-1-sm.jpg",
         "img_lg": "/assets/puppies/gallery/female/female-1-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -43,7 +55,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/female/female-2-sm.jpg",
         "img_lg": "/assets/puppies/gallery/female/female-2-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/female/female-2-lg.jpg",
+          "/assets/puppies/gallery/female/female-2-lg.jpg",
+          "/assets/puppies/gallery/female/female-2-lg.jpg",
+          "/assets/puppies/gallery/female/female-2-lg.jpg",
+          "/assets/puppies/gallery/female/female-2-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -60,7 +78,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/male/male-2-sm.jpg",
         "img_lg": "/assets/puppies/gallery/male/male-2-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -77,7 +101,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/female/female-1-sm.jpg",
         "img_lg": "/assets/puppies/gallery/female/female-1-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -94,7 +124,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/male/male-2-sm.jpg",
         "img_lg": "/assets/puppies/gallery/male/male-2-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -111,7 +147,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/female/female-1-sm.jpg",
         "img_lg": "/assets/puppies/gallery/female/female-1-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg",
+          "/assets/puppies/gallery/female/female-1-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",
@@ -128,7 +170,13 @@
       "images": {
         "img_sm": "/assets/puppies/gallery/male/male-2-sm.jpg",
         "img_lg": "/assets/puppies/gallery/male/male-2-lg.jpg",
-        "gallery": []
+        "gallery": [
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg",
+          "/assets/puppies/gallery/male/male-2-lg.jpg"
+        ]
       },
       "parentIds": [
         "p1",

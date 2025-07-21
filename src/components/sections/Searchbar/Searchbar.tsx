@@ -12,7 +12,7 @@ export function Searchbar(): JSX.Element {
    const { handleSubmit } = useContext(PuppiesContext);
 
    const onSearch = useCallback(() => {
-      router.push("/puppies#puppies-all");
+      router.push("/filhotes#puppies-all");
       handleSubmit();
    }, [router, handleSubmit]);
 

@@ -6,10 +6,10 @@ import "swiper/css/pagination";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import Image from "next/image";
-import { PuppiesCarousel } from "../Carousel/PuppiesCarousel";
 import { motion } from "framer-motion";
 import { PuppiesContext } from "@/contexts/context";
 import { fadeIn } from "@/utils/functions/variants";
+import { Carousel } from "../Carousel/Carousel";
 
 const CATEGORY_CONFIG = [
    { value: "all", label: "Todos", icon: null },
@@ -78,13 +78,13 @@ export function UpcomingSection(): JSX.Element {
                </TabsList>
             </Tabs>
             <Link
-               href={"/puppies#puppies-all"}
+               href={"/filhotes#puppies-all"}
                className="uppercase border-b-2 border-secondary text-sm font-semibold text-secondary hover:text-accent-hover transition-colors duration-300"
             >
                Ver todos os filhotes
             </Link>
          </div>
-         <PuppiesCarousel puppies={filteredAndSorted} />
+         <Carousel puppies={filteredAndSorted} />
       </motion.section>
    );
 }
