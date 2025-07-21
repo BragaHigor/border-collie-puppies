@@ -60,7 +60,7 @@ export function PuppiesList(): JSX.Element {
          <ul className="grid grid-cols-1 xl:grid-cols-4 gap-[1.875rem] mb-32">
             {orderedPuppies.map((puppy: Puppy) => (
                <li key={puppy.id}>
-                  <Link href={`/filhotes/${puppy.id}`}>
+                  <Link href={`/filhotes/${puppy.id}#filhotes-info`}>
                      <PuppiesCard puppies={puppy} />
                   </Link>
                </li>

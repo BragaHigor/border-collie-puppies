@@ -34,7 +34,7 @@ export function PuppiesInfo({ puppies }: ArticlesInfoProps) {
       puppies.sex.toLowerCase() === "macho" ? "bg-blue-500" : "bg-pink-500";
 
    return (
-      <div className="bg-secondary/20 py-8 px-6 md:px-12 xl:px-16 w-full flex flex-col gap-8 rounded-2xl">
+      <div className="bg-secondary/20 py-8 px-6 md:px-12 xl:px-16 w-[350px] flex flex-col gap-8 rounded-2xl">
          <div>
             <h3 className="h3 mb-4 text-accent">Informações:</h3>
             <div className="w-[4.625rem] h-[0.1875rem] bg-accent rounded-3xl mb-4"></div>
@@ -56,7 +56,7 @@ export function PuppiesInfo({ puppies }: ArticlesInfoProps) {
                   className="text-2xl text-accent"
                />
                <time dateTime={displayDate} className="text-lightText">
-                  Nascido dia: {displayDate}
+                  {displayDate}
                </time>
             </div>
             <div className="flex items-center gap-1 pt-2">

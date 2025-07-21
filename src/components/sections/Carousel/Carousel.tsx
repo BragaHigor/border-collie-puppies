@@ -40,7 +40,7 @@ export function Carousel({
             return (
                <SwiperSlide key={puppy.id} className="select-none">
                   <div className="relative">
-                     <Link href={`/filhotes/${puppy.id}`}>
+                     <Link href={`/filhotes/${puppy.id}#filhotes-info`}>
                         <PuppiesCard puppies={puppy} />
                      </Link>
                   </div>

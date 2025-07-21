@@ -19,8 +19,16 @@ export default function PuppiesDetailView({
          <Head>
             <title>Filhote disponível | Encinas & Braga Border Collie</title>
          </Head>
-         <section className="min-h-screen flex items-center py-8 sm:py-32">
+         <section className="min-h-screen flex items-center py-8 sm:py-32 pt-48 xl:pt-0">
             <div className="container mx-auto">
+               <div className="xl:mb-12 text-center">
+                  <h3 className="pretitle">
+                     Entre em contato para mais informações
+                  </h3>
+                  <h2 className="h2 text-secondary">
+                     Seu novo melhor amigo de quatro patas te espera aqui
+                  </h2>
+               </div>
                <div className="w-full max-w-[37.5rem] xl:max-w-none mx-auto">
                   <div className="flex flex-col gap-8 xl:gap-24 xl:flex-row pt-10 pb-12 sm:py-0 xl:mb-24">
                      <div className="relative w-full h-[20rem] xl:max-w-[41.875rem] xl:h-[31.25rem] rounded-2xl overflow-hidden mb-12 xl:mb-0">
