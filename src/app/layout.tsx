@@ -6,8 +6,36 @@ import { Caveat, Poppins } from "next/font/google";
 import { Footer } from "@/components/sections/Footer/Footer";
 
 export const metadata: Metadata = {
-   title: "Página Inicial | Encinas & Braga Border Collie",
-   description: "Encinas & Braga Border Collie - Filhotes de Border Collie",
+   metadataBase: new URL(process.env.SITE_URL!),
+   title: "Encinas & Braga Border Collie",
+   description: "Filhotes de Border Collie de alta qualidade.",
+   keywords: ["border collie", "filhotes", "cachorro"],
+   robots: {
+      index: true,
+      follow: true,
+   },
+   openGraph: {
+      title: "Encinas & Braga Border Collie",
+      description: "Filhotes de Border Collie de alta qualidade.",
+      url: "/",
+      siteName: "Encinas & Braga",
+      images: [
+         {
+            url: "/assets/logo-site/logo.png",
+            width: 1200,
+            height: 630,
+            alt: "Encinas & Braga Border Collie",
+         },
+      ],
+      type: "website",
+   },
+   twitter: {
+      card: "summary_large_image",
+   },
+   icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+   },
 };
 
 const poppins = Poppins({
@@ -25,12 +53,25 @@ const caveat = Caveat({
 
 export default function RootLayout({
    children,
-}: Readonly<{
+}: {
    children: React.ReactNode;
-}>) {
+}) {
    return (
       <PuppiesProvider>
-         <html lang="pt-br">
+         <html lang="pt-BR">
+            <head>
+               <link rel="preconnect" href="https://fonts.googleapis.com" />
+               <link
+                  rel="preconnect"
+                  href="https://fonts.gstatic.com"
+                  crossOrigin=""
+               />
+               <link
+                  rel="preload"
+                  as="image"
+                  href="/assets/logo-site/logo.png"
+               />
+            </head>
             <body
                className={`${poppins.variable} ${caveat.variable} antialiased`}
             >
