@@ -7,15 +7,15 @@
             "color": "Preto e Branco",
             "images": [
                 {
-                    "src": "/assets/parents/pai-preto-branco.png",
+                    "src": "/assets/parents/father/father-1.jpg",
                     "alt": "Lupin 1"
                 },
                 {
-                    "src": "/assets/parents/pai-preto-branco.png",
+                    "src": "/assets/parents/father/father-2.jpg",
                     "alt": "Lupin 2"
                 },
                 {
-                    "src": "/assets/parents/pai-preto-branco.png",
+                    "src": "/assets/parents/father/father-3.jpg",
                     "alt": "Lupin 3"
                 }
             ]
@@ -27,15 +27,15 @@
             "color": "Red Merle",
             "images": [
                 {
-                    "src": "/assets/parents/mae-red-merle.png",
+                    "src": "/assets/parents/mother/mother-1.jpg",
                     "alt": "Luna 1"
                 },
                 {
-                    "src": "/assets/parents/mae-red-merle.png",
+                    "src": "/assets/parents/mother/mother-2.jpg",
                     "alt": "Luna 2"
                 },
                 {
-                    "src": "/assets/parents/mae-red-merle.png",
+                    "src": "/assets/parents/mother/mother-3.jpg",
                     "alt": "Luna 3"
                 }
             ]
