@@ -2,21 +2,21 @@
     "parents": [
         {
             "id": "p1",
-            "name": "Lupin",
+            "name": "Ragnar",
             "role": "Pai",
             "color": "Preto e Branco",
             "images": [
                 {
                     "src": "/assets/parents/father/father-1.jpg",
-                    "alt": "Lupin 1"
+                    "alt": "ragnar 1"
                 },
                 {
                     "src": "/assets/parents/father/father-2.jpg",
-                    "alt": "Lupin 2"
+                    "alt": "ragnar 2"
                 },
                 {
                     "src": "/assets/parents/father/father-3.jpg",
-                    "alt": "Lupin 3"
+                    "alt": "ragnar 3"
                 }
             ]
         },
