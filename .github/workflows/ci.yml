@@ -12,6 +12,8 @@ on:
 jobs:
   build-and-test:
     runs-on: windows-latest
+    env:
+      SITE_URL: ${{ secrets.SITE_URL }}
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v3
