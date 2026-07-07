@@ -6,7 +6,9 @@ import { Caveat, Poppins } from "next/font/google";
 import { Footer } from "@/components/sections/Footer/Footer";
 
 export const metadata: Metadata = {
-   metadataBase: new URL(process.env.SITE_URL!),
+   metadataBase: new URL(
+      process.env.SITE_URL ?? "https://filhotes-encinas-braga.vercel.app",
+   ),
    title: "Encinas & Braga Border Collie",
    description: "Filhotes de Border Collie de alta qualidade.",
    keywords: ["border collie", "filhotes", "cachorro"],
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
 const poppins = Poppins({
    variable: "--font-poppins",
    subsets: ["latin"],
-   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+   weight: ["300", "400", "500", "600", "700"],
    display: "swap",
 });
 const caveat = Caveat({
@@ -57,29 +59,14 @@ export default function RootLayout({
    children: React.ReactNode;
 }) {
    return (
-      <PuppiesProvider>
-         <html lang="pt-BR">
-            <head>
-               <link rel="preconnect" href="https://fonts.googleapis.com" />
-               <link
-                  rel="preconnect"
-                  href="https://fonts.gstatic.com"
-                  crossOrigin=""
-               />
-               <link
-                  rel="preload"
-                  as="image"
-                  href="/assets/logo-site/logo.png"
-               />
-            </head>
-            <body
-               className={`${poppins.variable} ${caveat.variable} antialiased`}
-            >
+      <html lang="pt-BR" className={`${poppins.variable} ${caveat.variable}`}>
+         <body className="antialiased">
+            <PuppiesProvider>
                <Header />
                {children}
                <Footer />
-            </body>
-         </html>
-      </PuppiesProvider>
+            </PuppiesProvider>
+         </body>
+      </html>
    );
 }

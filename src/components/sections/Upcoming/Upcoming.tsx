@@ -1,15 +1,19 @@
 "use client";
 
-import { JSX, useCallback, useContext, useMemo, useState } from "react";
+import { JSX, useCallback, useMemo, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 import { fadeIn } from "@/utils/functions/variants";
 import { Carousel } from "../Carousel/Carousel";
+import {
+   filterPuppiesBySex,
+   sortByAvailability,
+} from "@/utils/functions/puppies";
 
 const CATEGORY_CONFIG = [
    { value: "all", label: "Todos", icon: null },
@@ -26,16 +30,13 @@ const CATEGORY_CONFIG = [
 ];
 
 export function UpcomingSection(): JSX.Element {
-   const { filterBySex } = useContext(PuppiesContext);
+   const { puppies } = usePuppiesContext();
    const [category, setCategory] = useState<string>("all");
 
    const filteredAndSorted = useMemo(() => {
-      const list = filterBySex(category);
-
-      return [...list].sort(
-         (a, b) => (b.availability ? 1 : 0) - (a.availability ? 1 : 0)
-      );
-   }, [category, filterBySex]);
+      const list = filterPuppiesBySex(puppies, category);
+      return sortByAvailability(list);
+   }, [puppies, category]);
 
    const handleCategoryChange = useCallback((value: string) => {
       setCategory(value);

@@ -9,12 +9,11 @@ import {
    SelectTrigger,
    SelectValue,
 } from "@/components/ui/select";
-import { useCallback, useContext, useMemo } from "react";
-import { PuppiesContext } from "@/contexts/context";
+import { useCallback, useMemo } from "react";
+import { usePuppiesContext } from "@/contexts/context";
 
 export function ColorSearch() {
-   const { puppies, selectedColor, setSelectedColor } =
-      useContext(PuppiesContext);
+   const { puppies, selectedColor, setSelectedColor } = usePuppiesContext();
 
    const uniqueColor = useMemo(() => {
       const colors = puppies.map((a) => a.color);
@@ -25,7 +24,7 @@ export function ColorSearch() {
       (value: string) => {
          setSelectedColor(value);
       },
-      [setSelectedColor]
+      [setSelectedColor],
    );
 
    return (

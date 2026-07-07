@@ -14,6 +14,7 @@ export interface Puppy {
    dateOfBirth: string;
    images: Images;
    availability: boolean;
+   parentIds?: string[];
 }
 
 export interface PuppiesContextValue {
@@ -29,7 +30,6 @@ export interface PuppiesContextValue {
    setSelectedSex: Dispatch<SetStateAction<string>>;
    selectedColor: string;
    setSelectedColor: Dispatch<SetStateAction<string>>;
-   filterBySex: (sex: string) => Puppy[];
    faqItems: FaqItem[];
 }
 

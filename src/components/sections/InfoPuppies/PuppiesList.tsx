@@ -1,23 +1,19 @@
 "use client";
 
-import { JSX, useContext, useMemo } from "react";
+import { JSX, useMemo } from "react";
 import { SkeletonGrid } from "../SkeletonGrid/SkeletonGrid";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 import { PuppiesCard } from "./PuppiesCard";
 import { Puppy } from "@/types";
+import { sortByAvailability } from "@/utils/functions/puppies";
 
 export function PuppiesList(): JSX.Element {
-   const { filteredPuppies, isLoading, error } = useContext(PuppiesContext);
+   const { filteredPuppies, isLoading, error } = usePuppiesContext();
 
    const orderedPuppies = useMemo(() => {
-      return [...filteredPuppies].sort((a, b) => {
-         return (
-            (b.availability === true ? 1 : 0) -
-            (a.availability === true ? 1 : 0)
-         );
-      });
+      return sortByAvailability(filteredPuppies);
    }, [filteredPuppies]);
 
    if (isLoading) {

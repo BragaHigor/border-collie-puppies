@@ -1,6 +1,6 @@
 "use client";
 
-import { JSX, useCallback, useContext, useMemo } from "react";
+import { JSX, useCallback, useMemo } from "react";
 import {
    Select,
    SelectContent,
@@ -10,10 +10,10 @@ import {
    SelectValue,
 } from "@/components/ui/select";
 import { PiGenderIntersexBold } from "react-icons/pi";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 
 export function SexSearch(): JSX.Element {
-   const { puppies, selectedSex, setSelectedSex } = useContext(PuppiesContext);
+   const { puppies, selectedSex, setSelectedSex } = usePuppiesContext();
 
    const uniqueSex = useMemo(() => {
       const sexs = puppies.map((a) => a.sex);
@@ -24,7 +24,7 @@ export function SexSearch(): JSX.Element {
       (value: string) => {
          setSelectedSex(value);
       },
-      [setSelectedSex]
+      [setSelectedSex],
    );
 
    return (

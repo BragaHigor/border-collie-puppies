@@ -1,15 +1,15 @@
 "use client";
 
-import { JSX, useCallback, useContext } from "react";
+import { JSX, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 import { SexSearch } from "./SexSearch";
 import { ColorSearch } from "./ColorSearch";
 
 export function Searchbar(): JSX.Element {
    const router = useRouter();
-   const { handleSubmit } = useContext(PuppiesContext);
+   const { handleSubmit } = usePuppiesContext();
 
    const onSearch = useCallback(() => {
       router.push("/filhotes#puppies-all");

@@ -1,14 +1,14 @@
 "use client";
 
-import { JSX, useCallback, useContext } from "react";
+import { JSX, useCallback } from "react";
 import { Searchbar } from "../Searchbar/Searchbar";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 import { BackgroundDogs } from "@/components/background/BackgroundDogs";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/functions/variants";
 
 export function Hero(): JSX.Element {
-   const { handleClearSearch } = useContext(PuppiesContext);
+   const { handleClearSearch } = usePuppiesContext();
 
    const onClear = useCallback(() => {
       handleClearSearch();

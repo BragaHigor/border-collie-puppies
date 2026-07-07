@@ -1,12 +1,12 @@
 "use client";
 
-import { JSX, useContext } from "react";
+import { JSX } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { FaqItem } from "./FaqItem";
 import { fadeIn } from "@/utils/functions/variants";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 
 const faqItemVariants = {
    hidden: { opacity: 0, y: 30 },
@@ -18,7 +18,7 @@ const faqItemVariants = {
 };
 
 export function FaqSection(): JSX.Element {
-   const { faqItems } = useContext(PuppiesContext);
+   const { faqItems } = usePuppiesContext();
 
    return (
       <section className="mb-12">

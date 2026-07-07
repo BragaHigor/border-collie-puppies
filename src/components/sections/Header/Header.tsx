@@ -1,12 +1,12 @@
 "use client";
 
-import React, { JSX, useCallback, useContext } from "react";
+import React, { JSX, useCallback } from "react";
 import Link from "next/link";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 import Image from "next/image";
 
 export function Header(): JSX.Element {
-   const { handleClearSearch } = useContext(PuppiesContext);
+   const { handleClearSearch } = usePuppiesContext();
 
    const onClear = useCallback(() => {
       handleClearSearch();

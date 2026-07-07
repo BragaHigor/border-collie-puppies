@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useContext } from "react";
+import { ReactElement } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -10,10 +10,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { fadeIn } from "@/utils/functions/variants";
 import { Parent } from "@/types";
-import { PuppiesContext } from "@/contexts/context";
+import { usePuppiesContext } from "@/contexts/context";
 
 export function ParentsSection(): ReactElement {
-   const { parents } = useContext(PuppiesContext);
+   const { parents } = usePuppiesContext();
 
    return (
       <motion.section

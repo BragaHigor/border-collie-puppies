@@ -42,6 +42,23 @@ module.exports = {
          backgroundImage: {
             pattern: "url('/assets/background/footer/pattern-bg.png')",
          },
+         fontSize: {
+            "display-1": ["4.375rem", { lineHeight: "4.875rem" }],
+            "display-2": "2.75rem",
+            "display-3": "2rem",
+            pretitle: "2.875rem",
+         },
+         keyframes: {
+            float: {
+               "0%, 100%": { transform: "translateY(0px)" },
+               "50%": { transform: "translateY(-40px)" },
+            },
+         },
+         animation: {
+            float: "float 10s ease-in-out infinite",
+            "float-slow": "float 14s ease-in-out infinite",
+            "float-fast": "float 8s ease-in-out infinite",
+         },
       },
    },
    // eslint-disable-next-line @typescript-eslint/no-require-imports

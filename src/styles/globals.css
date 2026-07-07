@@ -1,6 +1,14 @@
+/* ============================================================
+   TAILWIND DIRECTIVES
+   ============================================================ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ============================================================
+   BASE — Estilos globais de corpo e elementos HTML
+   ============================================================ */
 
 body {
    @apply bg-primary text-secondary font-primary;
@@ -15,16 +23,22 @@ h6 {
    @apply font-primary;
 }
 
+/* ============================================================
+   TYPOGRAPHY — Classes semânticas reutilizáveis
+   Aplicadas via className nos componentes JSX.
+   Tokens de fonte registrados em tailwind.config.js (theme.extend.fontSize).
+   ============================================================ */
+
 .h1 {
-   @apply text-4xl xl:text-[4.375rem] font-bold xl:leading-[4.875rem] uppercase text-secondary;
+   @apply text-4xl xl:text-display-1 font-bold uppercase text-secondary;
 }
 
 .h2 {
-   @apply text-3xl xl:text-[2.75rem] leading-[120%] font-semibold;
+   @apply text-3xl xl:text-display-2 leading-[120%] font-semibold;
 }
 
 .h3 {
-   @apply text-[2rem] leading-[110%] font-medium;
+   @apply text-display-3 leading-[110%] font-medium;
 }
 
 .h4 {
@@ -32,8 +46,15 @@ h6 {
 }
 
 .pretitle {
-   @apply font-secondary text-4xl xl:text-[2.875rem] leading-[110%] text-accent-hover;
+   @apply font-secondary text-4xl xl:text-pretitle leading-[110%] text-accent-hover;
 }
+
+/* ============================================================
+   COMPONENTS — Sistema de botões global
+   TODO: os botões em PuppiesCard.tsx, PuppiesInfo.tsx e Footer.tsx
+   ainda usam classes Tailwind inline. Avaliar migrar para este sistema
+   ou remover definitivamente em uma refatoração futura.
+   ============================================================ */
 
 .btn {
    @apply min-w-[7rem] h-[3rem] rounded-full flex items-center justify-center text-sm font-medium transition-all;
@@ -47,41 +68,18 @@ h6 {
    @apply bg-secondary hover:bg-secondary-hover;
 }
 
-.btn-tertiary {
-   @apply bg-accent hover:bg-accent-hover;
-}
+/* ============================================================
+   VENDORS — Sobrescritas de estilos de bibliotecas externas
+   Swiper v11.x: paginação por bullets e setas de navegação.
+   ATENÇÃO: seletores dependem da estrutura de classes do Swiper.
+   ============================================================ */
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
    @apply bg-accent;
 }
 
-@keyframes float {
-   0% {
-      transform: translateY(0px);
-   }
-   50% {
-      transform: translateY(-40px);
-   }
-   100% {
-      transform: translateY(0px);
-   }
-}
-
-.animate-float {
-   animation: float 10s ease-in-out infinite;
-}
-
-.animate-float-slow {
-   animation: float 14s ease-in-out infinite;
-}
-
-.animate-float-fast {
-   animation: float 8s ease-in-out infinite;
-}
-
 .swiper-button-prev::after,
 .swiper-button-next::after {
-   @apply text-white;
-   font-size: 1rem;
+   @apply text-white text-base;
 }
