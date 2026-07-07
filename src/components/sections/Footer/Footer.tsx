@@ -26,8 +26,13 @@ const svgs = [
    "/assets/background/dogs/dog-breed-svgrepo-com (18).svg",
 ];
 
+function getCurrentYear(): number {
+   return new Date().getFullYear();
+}
+
 export function Footer(): JSX.Element {
    const [shuffledSvgs, setShuffledSvgs] = useState<string[]>([]);
+   const currentYear = getCurrentYear();
 
    useEffect(() => {
       const array = [...svgs];
@@ -79,7 +84,8 @@ export function Footer(): JSX.Element {
             <div className="container mx-auto">
                <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
                   <p className="text-sm text-primary">
-                     Copyright &copy; 2025. Todos os direitos reservados.
+                     Copyright &copy; {currentYear}. Todos os direitos
+                     reservados.
                   </p>
                   <a
                      href={whatsappLink}
