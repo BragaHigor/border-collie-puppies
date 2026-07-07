@@ -2,21 +2,21 @@
     "parents": [
         {
             "id": "p1",
-            "name": "Ragnar",
+            "name": "Zenon",
             "role": "Pai",
-            "color": "Preto e Branco",
+            "color": "Marrom",
             "images": [
                 {
-                    "src": "/assets/parents/father/father-1.jpg",
-                    "alt": "ragnar 1"
+                    "src": "/assets/parents/father/father-1.jpeg",
+                    "alt": "Zenon 1"
                 },
                 {
-                    "src": "/assets/parents/father/father-2.jpg",
-                    "alt": "ragnar 2"
+                    "src": "/assets/parents/father/father-2.jpeg",
+                    "alt": "Zenon 2"
                 },
                 {
-                    "src": "/assets/parents/father/father-3.jpg",
-                    "alt": "ragnar 3"
+                    "src": "/assets/parents/father/father-3.jpeg",
+                    "alt": "Zenon 3"
                 }
             ]
         },
@@ -31,11 +31,11 @@
                     "alt": "Luna 1"
                 },
                 {
-                    "src": "/assets/parents/mother/mother-2.jpg",
+                    "src": "/assets/parents/mother/mother-3.jpg",
                     "alt": "Luna 2"
                 },
                 {
-                    "src": "/assets/parents/mother/mother-3.jpg",
+                    "src": "/assets/parents/mother/mother-2.jpg",
                     "alt": "Luna 3"
                 }
             ]
