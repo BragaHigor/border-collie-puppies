@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Encinas & Braga Border Collie
 
-## Getting Started
+Site desenvolvido para apresentar os filhotes da Encinas & Braga Border Collie de forma clara, responsiva e fácil de navegar.
 
-First, run the development server:
+🌐 **Acesse:** [filhotes-encinas-braga.vercel.app](https://filhotes-encinas-braga.vercel.app/)
+
+## Sobre o projeto
+
+A aplicação reúne informações dos filhotes disponíveis, detalhes dos pais, galeria de imagens e respostas para dúvidas frequentes. Cada filhote possui uma página própria e uma chamada de contato pelo WhatsApp com mensagem personalizada.
+
+Entre os principais recursos estão:
+
+- listagem e detalhes dos filhotes;
+- filtros por sexo e disponibilidade;
+- galeria responsiva de imagens;
+- apresentação dos pais;
+- perguntas frequentes;
+- contato direto pelo WhatsApp;
+- animações e transições de interface;
+- metadados para compartilhamento e SEO.
+
+## Tecnologias
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Radix UI
+- Framer Motion
+- Swiper
+- Lucide React
+
+## Como executar
 
 ```bash
+git clone https://github.com/BragaHigor/border-collie-puppies.git
+cd border-collie-puppies
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse `http://localhost:3000` no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev    # ambiente de desenvolvimento
+npm run build  # build de produção
+npm start      # inicia o build de produção
+npm run lint   # análise do código
+```
