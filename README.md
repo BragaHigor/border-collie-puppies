@@ -2,7 +2,7 @@
 
 Site desenvolvido para apresentar os filhotes da Encinas & Braga Border Collie de forma clara, responsiva e fácil de navegar.
 
-🌐 **Acesse:** [filhotes-encinas-braga.vercel.app](https://filhotes-encinas-braga.vercel.app/)
+🌐 **Acesse:** [border-collie-puppies.vercel.app](https://border-collie-puppies.vercel.app/)
 
 ## Sobre o projeto
 
