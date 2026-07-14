@@ -4,31 +4,38 @@ on:
   push:
     branches:
       - main
-      - ci-test
   pull_request:
     branches:
       - main
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build-and-test:
-    runs-on: windows-latest
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       SITE_URL: ${{ secrets.SITE_URL }}
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v7
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Configurar Node.js
+        uses: actions/setup-node@v6
         with:
-          node-version: '20.18.0'
-          cache: 'npm'
+          node-version: "20.18.0"
+          cache: npm
 
       - name: Instalar dependências
         run: npm ci
 
-      - name: Rodar lint
+      - name: Executar lint
         run: npm run lint
 
-      - name: Build de produção
+      - name: Criar build de produção
         run: npm run build
